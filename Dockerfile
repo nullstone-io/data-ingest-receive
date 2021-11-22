@@ -7,8 +7,7 @@ COPY main.rb ${LAMBDA_TASK_ROOT}
 COPY Gemfile ${LAMBDA_TASK_ROOT}
 
 # Install dependencies under LAMBDA_TASK_ROOT
-ENV GEgit diff
-giM_HOME=${LAMBDA_TASK_ROOT}
+ENV GEM_HOME=${LAMBDA_TASK_ROOT}
 RUN bundle install
 
 # Set the CMD to your handler (could also be done as a parameter override outside of the Dockerfile)
