@@ -1,10 +1,10 @@
 require 'amazing_print'
 
-module LambdaFunctions
+module LambdaFunction
   class Handler
-    def self.process(context, events)
+    def self.process(event:, context:)
+      ap event
       ap context
-      ap events
     end
   end
 end
